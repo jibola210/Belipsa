@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Belipsa | Luxury Lip Gloss</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <p class="brand-tag">BELIPSA</p>
+
+      <h1>Luxury gloss for effortlessly beautiful lips.</h1>
+
+      <p class="hero-text">
+        High-shine, hydrating lip gloss crafted to elevate your everyday look.
+      </p>
+
+      <a href="#products" class="btn">Shop Collection</a>
+    </div>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <h2>Your Lips, Your Luxury!</h2>
+
+    <p>
+      Belipsa combines rich shine, soft texture, and elegant beauty essentials
+      designed for women who love looking polished every day.
+    </p>
+  </section>
+
+  <!-- PRETTY GIRLS ROCK -->
+  <section class="pretty-girls">
+
+    <div class="section-header">
+      <p>BELIPSA BABES</p>
+      <h2>Pretty Girls Rock Belipsa ✨</h2>
+    </div>
+
+    <div class="collage-card">
+      <img
+        src="images/pretty girls rock belipsa.jpg.jpg"
+        alt="Pretty Girls Rock Belipsa"
+      >
+    </div>
+
+    <p class="gallery-text">
+      Real beauties wearing and loving Belipsa 💄💕
+    </p>
+
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="products">
+
+    <div class="section-header">
+      <p>OUR COLLECTION</p>
+      <h2>Best Sellers</h2>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- CHOCO GLOSS -->
+      <div class="product-card">
+        <img src="images/choco-gloss.jpg.jpeg" alt="Choco Lip Gloss">
+
+        <div class="product-info">
+          <h3>CHOCO LIP GLOSS</h3>
+          <p class="price">₦3,000</p>
+
+          <button onclick="payWithPaystack('Choco Lip Gloss', 3000)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+
+      <!-- LIP SCRUB -->
+      <div class="product-card">
+        <img src="images/lipscrub.jpg.jpg" alt="Lip Scrub">
+
+        <div class="product-info">
+          <h3>Lip Scrub</h3>
+          <p class="price">₦3,000</p>
+
+          <button onclick="payWithPaystack('Lip Scrub', 3000)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+
+      <!-- WHOLESALE -->
+      <div class="product-card">
+        <img src="images/wholesales order.jpg.jpg" alt="Wholesale Order">
+
+        <div class="product-info">
+          <h3>Wholesale Order</h3>
+          <p class="price">₦100,000+</p>
+
+          <button onclick="payWithPaystack('Wholesale Order', 100000)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+
+      <!-- ORDER FROM US -->
+      <div class="product-card">
+        <img src="images/Orderfromustoday!!.jpg.jpg" alt="Order From Us Today">
+
+        <div class="product-info">
+          <h3>Order From Us Today</h3>
+          <p class="price">More+</p>
+
+          <button onclick="payWithPaystack('Order From Us Today', 5000)">
+            Buy Now
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <h3>Belipsa</h3>
+      <p>Luxury lip gloss & beauty essentials</p>
+      <p>© 2026 Belipsa. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- PAYSTACK SCRIPT -->
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+
+  <!-- YOUR SCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
