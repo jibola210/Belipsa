@@ -1,150 +1,1181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Belipsa | Luxury Lip Gloss</title>
+    <meta charset="UTF-8">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Belipsa | Beauty & Lip Care</title>
 
-  <link rel="stylesheet" href="style.css"/>
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 </head>
+
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <p class="brand-tag">BELIPSA</p>
 
-      <h1>Luxury gloss for effortlessly beautiful lips.</h1>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
-      <p class="hero-text">
-        High-shine, hydrating lip gloss crafted to elevate your everyday look.
-      </p>
+    <header class="site-header">
 
-      <a href="#products" class="btn">Shop Collection</a>
-    </div>
-  </header>
+        <div class="header-container">
 
-  <!-- INTRO -->
-  <section class="intro">
-    <h2>Your Lips, Your Luxury!</h2>
+            <a
+                href="#home"
+                class="logo"
+            >
+                BELIPSA
+            </a>
 
-    <p>
-      Belipsa combines rich shine, soft texture, and elegant beauty essentials
-      designed for women who love looking polished every day.
-    </p>
-  </section>
 
-  <!-- PRETTY GIRLS ROCK -->
-  <section class="pretty-girls">
+            <nav class="main-nav">
 
-    <div class="section-header">
-      <p>BELIPSA BABES</p>
-      <h2>Pretty Girls Rock Belipsa ✨</h2>
-    </div>
+                <a href="#home">
+                    Home
+                </a>
 
-    <div class="collage-card">
-      <img
-        src="images/pretty girls rock belipsa.jpg.jpg"
-        alt="Pretty Girls Rock Belipsa"
-      >
-    </div>
+                <a href="#shop">
+                    Shop
+                </a>
 
-    <p class="gallery-text">
-      Real beauties wearing and loving Belipsa 💄💕
-    </p>
+                <a href="#about">
+                    About
+                </a>
 
-  </section>
+                <a href="#contact">
+                    Contact
+                </a>
 
-  <!-- PRODUCTS -->
-  <section id="products" class="products">
+            </nav>
 
-    <div class="section-header">
-      <p>OUR COLLECTION</p>
-      <h2>Best Sellers</h2>
-    </div>
 
-    <div class="product-grid">
+            <button
+                type="button"
+                class="cart-button"
+                onclick="openCart()"
+            >
 
-      <!-- CHOCO GLOSS -->
-      <div class="product-card">
-        <img src="images/choco-gloss.jpg.jpeg" alt="Choco Lip Gloss">
+                🛍️
 
-        <div class="product-info">
-          <h3>CHOCO LIP GLOSS</h3>
-          <p class="price">₦3,000</p>
+                <span id="cart-count">
+                    0
+                </span>
 
-          <button onclick="payWithPaystack('Choco Lip Gloss', 3000)">
-            Buy Now
-          </button>
+            </button>
+
         </div>
-      </div>
 
-      <!-- LIP SCRUB -->
-      <div class="product-card">
-        <img src="images/lipscrub.jpg.jpg" alt="Lip Scrub">
+    </header>
 
-        <div class="product-info">
-          <h3>Lip Scrub</h3>
-          <p class="price">₦3,000</p>
 
-          <button onclick="payWithPaystack('Lip Scrub', 3000)">
-            Buy Now
-          </button>
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <main>
+
+
+        <section
+            class="hero"
+            id="home"
+        >
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    WELCOME TO BELIPSA
+                </p>
+
+                <h1>
+                    Your Lips.<br>
+                    Your Luxury.
+                </h1>
+
+                <p class="hero-text">
+                    Discover beautiful lip products
+                    created to make every look feel
+                    a little more special.
+                </p>
+
+                <a
+                    href="#shop"
+                    class="hero-button"
+                >
+                    Shop Now
+                </a>
+
+            </div>
+
+
+            
+
+            
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             SHOP SECTION
+        ========================================== -->
+
+        <section
+            class="products-section"
+            id="shop"
+        >
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    SHOP BELIPSA
+                </p>
+
+                <h2>
+                    Find Your Perfect Lip products
+                </h2>
+
+                <p>
+                    Explore our collection of lip
+                    glosses and lip care essentials.
+                </p>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 ONE SINGLE PRODUCT GRID
+            ====================================== -->
+
+            <div class="products-grid">
+
+
+                <!-- =================================
+                     CHOCO GLOSS
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/choco-gloss.jpg.jpeg"
+                            alt="Choco Gloss"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP GLOSS
+                        </p>
+
+                        <h3>
+                            Choco Gloss
+                        </h3>
+
+                        <p class="product-price">
+                            ₦3,000
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="choco-gloss"
+                                onclick="addToCart('choco-gloss')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('choco-gloss')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('choco-gloss')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     LIP BALM
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/lip-balm.jpg.jpeg"
+                            alt="Lip Balm"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP CARE
+                        </p>
+
+                        <h3>
+                            Lip Balm
+                        </h3>
+
+                        <p class="product-price">
+                            ₦1,500
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="lip-balm"
+                                onclick="addToCart('lip-balm')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('lip-balm')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('lip-balm')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     LIP SCRUB
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/lipscrub.jpg.jpg"
+                            alt="Lip Scrub"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP CARE
+                        </p>
+
+                        <h3>
+                            Lip Scrub
+                        </h3>
+
+                        <p class="product-price">
+                            ₦1,500
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="lipscrub"
+                                onclick="addToCart('lipscrub')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('lipscrub')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('lipscrub')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     PINK NUDE AND NUDE
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/pink nude and nude.jpg.jpg"
+                            alt="Pink Nude and Nude"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP GLOSS
+                        </p>
+
+                        <h3>
+                            Pink Nude and Nude
+                        </h3>
+
+                        <p class="product-price">
+                            ₦3,000
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="pink-nude"
+                                onclick="addToCart('pink-nude')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('pink-nude')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('pink-nude')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     WHOLESALE
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/wholesales order.jpg.jpg"
+                            alt="Belipsa Wholesale Order"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            WHOLESALE
+                        </p>
+
+                        <h3>
+                            Wholesale Order
+                        </h3>
+
+                        <p class="product-price">
+                            ₦25,000 / 12 pcs
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="wholesale-order"
+                                onclick="addToCart('wholesale-order')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('wholesale-order')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('wholesale-order')"
+                        >
+                            Read about wholesale →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     BARBIE TUBE
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/barbie tube.jpg.jpg"
+                            alt="Barbie Tube"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP GLOSS
+                        </p>
+
+                        <h3>
+                            Barbie Tube
+                        </h3>
+
+                        <p class="product-price">
+                            ₦3,000
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="barbie-tube"
+                                onclick="addToCart('barbie-tube')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('barbie-tube')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('barbie-tube')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     WAND TUBE
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/wand tube gloss.jpg.jpg"
+                            alt="Wand Tube"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP GLOSS
+                        </p>
+
+                        <h3>
+                            Wand Tube
+                        </h3>
+
+                        <p class="product-price">
+                            ₦3,000
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="wand-tube"
+                                onclick="addToCart('wand-tube')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('wand-tube')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('wand-tube')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================
+                     RED LIP GLOSS
+                ================================== -->
+
+                <article class="product-card">
+
+                    <div class="product-image">
+
+                        <img
+                            src="images/red lip gloss.jpg.jpg"
+                            alt="Red Lip Gloss"
+                        >
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <p class="product-type">
+                            LIP GLOSS
+                        </p>
+
+                        <h3>
+                            Red Lip Gloss
+                        </h3>
+
+                        <p class="product-price">
+                            ₦3,000
+                        </p>
+
+
+                        <div class="product-actions">
+
+                            <button
+                                type="button"
+                                class="add-button"
+                                data-product="red-lip-gloss"
+                                onclick="addToCart('red-lip-gloss')"
+                            >
+                                Add to Cart
+                            </button>
+
+                            <button
+                                type="button"
+                                class="buy-button"
+                                onclick="buyNow('red-lip-gloss')"
+                            >
+                                Buy Now
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="read-more"
+                            onclick="showProduct('red-lip-gloss')"
+                        >
+                            Read about product →
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        
+        </section>
+
+
+
+        <!-- =========================================
+             ABOUT
+        ========================================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="about-content">
+
+                <p class="section-label">
+                    ABOUT BELIPSA
+                </p>
+
+                <h2>
+                    Your Lips. Your Luxury!
+                </h2>
+
+                <p>
+                    Belipsa is a beauty brand focused on
+                    helping you feel confident through
+                    simple, beautiful and effortless lip
+                    products.
+                </p>
+
+                <p>
+                    From everyday glosses to lip care
+                    essentials, every product is selected
+                    to help you create a lip look that
+                    feels uniquely yours.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACT
+        ========================================== -->
+
+        <section
+            class="contact-section"
+            id="contact"
+        >
+
+            <div class="contact-content">
+
+                <p class="section-label">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    We'd love to hear from you.
+                </h2>
+
+                <p>
+                    Have a question about an order,
+                    product or wholesale purchase?
+                    Get in touch with Belipsa.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         CART OVERLAY
+    ========================================== -->
+
+    <div
+        id="overlay"
+        class="overlay"
+        onclick="closeEverything()"
+    >
+    </div>
+
+
+
+    <!-- =========================================
+         CART SIDEBAR
+    ========================================== -->
+
+    <aside
+        id="cart-sidebar"
+        class="cart-sidebar"
+    >
+
+        <div class="cart-header">
+
+            <h2>
+                Your Cart
+            </h2>
+
+            <button
+                type="button"
+                onclick="closeCart()"
+            >
+                ×
+            </button>
+
         </div>
-      </div>
 
-      <!-- WHOLESALE -->
-      <div class="product-card">
-        <img src="images/wholesales order.jpg.jpg" alt="Wholesale Order">
 
-        <div class="product-info">
-          <h3>Wholesale Order</h3>
-          <p class="price">₦100,000+</p>
+        <div
+            id="cart-items"
+            class="cart-items"
+        >
 
-          <button onclick="payWithPaystack('Wholesale Order', 100000)">
-            Buy Now
-          </button>
+            <div class="empty-cart">
+
+                <p>
+                    Your cart is empty.
+                </p>
+
+                <p>
+                    Add something beautiful.
+                </p>
+
+            </div>
+
         </div>
-      </div>
 
-      <!-- ORDER FROM US -->
-      <div class="product-card">
-        <img src="images/Orderfromustoday!!.jpg.jpg" alt="Order From Us Today">
 
-        <div class="product-info">
-          <h3>Order From Us Today</h3>
-          <p class="price">More+</p>
+        <div class="cart-footer">
 
-          <button onclick="payWithPaystack('Order From Us Today', 5000)">
-            Buy Now
-          </button>
+            <div class="cart-total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cart-total">
+                    ₦0
+                </strong>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="checkout-button"
+                onclick="openCheckout()"
+            >
+                Proceed to Checkout
+            </button>
+
         </div>
-      </div>
+
+    </aside>
+
+
+
+    <!-- =========================================
+         PRODUCT DETAILS MODAL
+    ========================================== -->
+
+    <div
+        id="product-modal"
+        class="modal"
+    >
+
+        <div class="modal-content product-modal-content">
+
+            <button
+                type="button"
+                class="modal-close"
+                onclick="closeProduct()"
+            >
+                ×
+            </button>
+
+
+            <div class="modal-product-image">
+
+                <img
+                    id="modal-image"
+                    src=""
+                    alt=""
+                >
+
+            </div>
+
+
+            <div class="modal-product-info">
+
+                <p class="product-type">
+                    BELIPSA
+                </p>
+
+                <h2 id="modal-name">
+                    Product Name
+                </h2>
+
+                <p
+                    id="modal-price"
+                    class="modal-price"
+                >
+                    ₦0
+                </p>
+
+                <p
+                    id="modal-description"
+                    class="modal-description"
+                >
+                    Product description
+                </p>
+
+
+                <h4>
+                    Product Details
+                </h4>
+
+                <ul
+                    id="modal-features"
+                    class="modal-features"
+                >
+                </ul>
+
+
+                <button
+                    type="button"
+                    id="modal-cart-button"
+                    class="modal-add-button"
+                >
+                    Add to Cart
+                </button>
+
+            </div>
+
+        </div>
 
     </div>
-  </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <h3>Belipsa</h3>
-      <p>Luxury lip gloss & beauty essentials</p>
-      <p>© 2026 Belipsa. All rights reserved.</p>
+
+
+    <!-- =========================================
+         CHECKOUT MODAL
+    ========================================== -->
+
+    <div
+        id="checkout-modal"
+        class="modal"
+    >
+
+        <div class="modal-content checkout-content">
+
+            <button
+                type="button"
+                class="modal-close"
+                onclick="closeCheckout()"
+            >
+                ×
+            </button>
+
+
+            <h2>
+                Checkout
+            </h2>
+
+
+            <div
+                id="checkout-items"
+                class="checkout-items"
+            >
+            </div>
+
+
+            <div class="checkout-total-row">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="checkout-total">
+                    ₦0
+                </strong>
+
+            </div>
+
+
+            <form
+                id="checkout-form"
+                onsubmit="submitOrder(event)"
+            >
+
+                <div class="form-group">
+
+                    <label for="customer-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customer-name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customer-phone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customer-phone"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customer-address">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="customer-address"
+                        rows="4"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <div class="payment-info">
+
+                    <h3>
+                        Payment Information
+                    </h3>
+
+                    <p>
+                        Please make your payment using
+                        the bank details provided by
+                        Belipsa.
+                    </p>
+
+
+                    <p>
+                        <strong>
+                            Account Number:
+                        </strong>
+
+                        <span id="account-number">
+                            9073958997
+                            MONIEPOINT
+                        </span>
+                    </p>
+
+
+                    <button
+                        type="button"
+                        onclick="copyAccountNumber()"
+                    >
+                        Copy Account Number
+                    </button>
+
+
+                    <p>
+                        <strong>
+                            Order Reference:
+                        </strong>
+
+                        <span id="order-reference">
+                            BELIPSA-00000
+                        </span>
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="checkout-submit"
+                >
+                    Place Order
+                </button>
+
+            </form>
+
+        </div>
+
     </div>
-  </footer>
 
-  <!-- PAYSTACK SCRIPT -->
-  <script src="https://js.paystack.co/v1/inline.js"></script>
 
-  <!-- YOUR SCRIPT -->
-  <script src="script.js"></script>
+
+    <!-- =========================================
+         SUCCESS MODAL
+    ========================================== -->
+
+    <div
+        id="success-modal"
+        class="modal"
+    >
+
+        <div class="modal-content success-content">
+
+            <h2>
+                Order Received
+            </h2>
+
+
+            <div id="success-message">
+
+                Thank you for your order.
+
+            </div>
+
+
+            <button
+                type="button"
+                class="checkout-submit"
+                onclick="closeSuccess()"
+            >
+                Continue Shopping
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <h2>
+                BELIPSA
+            </h2>
+
+            <p>
+                Beauty in every detail.
+            </p>
+
+            <p class="copyright">
+                © 2026 Belipsa. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
