@@ -91,20 +91,22 @@ const products = {
         ]
     },
 
-    "Red-lip-gloss": {
-        name: "Red Lip Gloss",
-        price: 3000,
-        image: "images/red lip gloss.jpg.jpg",
-        description: "A beautiful lip gloss created to give your lips a smooth, glossy finish and an effortlessly polished look.",
-        features: [
-            "Beautiful glossy shine",
-            "Smooth application",
-            "Lightweight feel",
-            "Easy to wear"
-        ]
-    }
+    "re-lip-gloss": {
+    name: "Re Lip Gloss",
+    price: 3000,
+    image: "images/Red lip gloss.jpg.jpg",
+    description: "A beautiful lip gloss created to give your lips a smooth, glossy finish and an effortlessly polished look.",
+    features: [
+        "Beautiful glossy shine",
+        "Smooth application",
+        "Lightweight feel",
+        "Easy to wear"
+    ]
+},
+        
+}
 
-};
+
 
 // ================= CART =================
 
