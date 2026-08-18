@@ -91,10 +91,10 @@ const products = {
         ]
     },
 
-    "re-lip-gloss": {
-    name: "Re Lip Gloss",
+    "Red-Lip-Gloss": {
+    name: "Red Lip Gloss",
     price: 3000,
-    image: "images/Red lip gloss.jpg.jpg",
+    image: "images/Red Lip Gloss.jpg.jpg",
     description: "A beautiful lip gloss created to give your lips a smooth, glossy finish and an effortlessly polished look.",
     features: [
         "Beautiful glossy shine",
