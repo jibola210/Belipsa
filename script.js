@@ -128,7 +128,7 @@ const products = {
     },
 
 
-    "red-lip-gloss": {
+    "Red-Lip-Gloss": {
         name: "Red Lip Gloss",
         price: 3000,
         image: "images/Red Lip Gloss.jpg.jpg",

@@ -1695,4 +1695,626 @@ a {
         padding: 25px 15px;
     }
 
+}/* =========================================
+   BELIPSA — MOBILE FIX
+   Add this at the VERY BOTTOM of style.css
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* ===============================
+       GENERAL
+    =============================== */
+
+    html {
+        overflow-x: hidden;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* ===============================
+       HEADER
+    =============================== */
+
+    .site-header {
+        position: sticky;
+        top: 0;
+        width: 100%;
+    }
+
+    .header-container {
+        width: 94%;
+        min-height: 64px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 21px;
+        letter-spacing: 3px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .cart-button {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+        flex-shrink: 0;
+    }
+
+    #cart-count {
+        width: 18px;
+        height: 18px;
+        font-size: 9px;
+    }
+
+
+    /* ===============================
+       HERO
+    =============================== */
+
+    .hero {
+        width: 94%;
+        min-height: auto;
+        margin: 15px auto 0;
+
+        display: block;
+
+        border-radius: 20px;
+    }
+
+    .hero-content {
+        padding: 50px 25px;
+    }
+
+    .hero-small {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+        line-height: 1;
+    }
+
+    .hero-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .hero-button {
+        padding: 13px 23px;
+        font-size: 12px;
+    }
+
+
+    /* ===============================
+       SHOP
+    =============================== */
+
+    .products-section {
+        width: 94%;
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+        line-height: 1.15;
+    }
+
+    .section-heading p:last-child {
+        font-size: 13px;
+    }
+
+
+    /* ===============================
+       PRODUCT GRID
+    =============================== */
+
+    .products-grid {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+
+    /* ===============================
+       PRODUCT CARD
+    =============================== */
+
+    .product-card {
+        width: 100%;
+        min-width: 0;
+
+        border-radius: 14px;
+    }
+
+    .product-image {
+        width: 100%;
+        height: 190px;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        padding: 8px;
+
+        object-fit: contain;
+    }
+
+    .product-details {
+        padding: 12px;
+    }
+
+    .product-type {
+        font-size: 8px;
+        letter-spacing: 1.5px;
+        margin-bottom: 5px;
+    }
+
+    .product-details h3 {
+        font-size: 15px;
+        line-height: 1.25;
+
+        min-height: 38px;
+    }
+
+    .product-price {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+
+    /* ===============================
+       PRODUCT BUTTONS
+    =============================== */
+
+    .product-actions {
+        display: flex;
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .product-actions button {
+        width: 100%;
+        min-height: 38px;
+
+        font-size: 10px;
+    }
+
+    .read-more {
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+
+    /* ===============================
+       BRAND BANNER
+    =============================== */
+
+    .brand-banner {
+        width: 94%;
+        margin: 0 auto 65px;
+        border-radius: 18px;
+    }
+
+    .brand-banner img {
+        width: 100%;
+        height: 210px;
+
+        object-fit: cover;
+    }
+
+
+    /* ===============================
+       TRACK ORDER
+    =============================== */
+
+    .tracking-section {
+        width: 100%;
+        padding: 70px 18px;
+        overflow: hidden;
+    }
+
+    .tracking-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .tracking-content h2 {
+        font-size: 34px;
+        line-height: 1.1;
+    }
+
+    .tracking-intro {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+    .tracking-box {
+        width: 100%;
+        padding: 25px 18px;
+
+        border-radius: 16px;
+    }
+
+    .tracking-box h3 {
+        font-size: 21px;
+    }
+
+    .tracking-box p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .tracking-form {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .tracking-form input {
+        width: 100%;
+        min-height: 46px;
+
+        font-size: 13px;
+    }
+
+    .tracking-form button {
+        width: 100%;
+        min-height: 46px;
+
+        font-size: 12px;
+    }
+
+    #tracking-result {
+        width: 100%;
+        margin-top: 18px;
+
+        overflow-wrap: break-word;
+    }
+
+
+    /* ===============================
+       ABOUT
+    =============================== */
+
+    .about-section {
+        padding: 70px 18px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 35px;
+        line-height: 1.1;
+    }
+
+    .about-content p:not(.section-label) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* ===============================
+       CONTACT
+    =============================== */
+
+    .contact-section {
+        padding: 70px 18px;
+    }
+
+    .contact-content {
+        width: 100%;
+    }
+
+    .contact-content h2 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .contact-content p:not(.section-label) {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .contact-phone {
+        font-size: 16px;
+    }
+
+    .whatsapp-button {
+        padding: 12px 22px;
+        font-size: 12px;
+    }
+
+
+    /* ===============================
+       CART SIDEBAR
+    =============================== */
+
+    .cart-sidebar {
+        width: 100%;
+        max-width: 390px;
+    }
+
+    .cart-header {
+        padding: 18px;
+    }
+
+    .cart-header h2 {
+        font-size: 23px;
+    }
+
+    .cart-items {
+        padding: 15px;
+    }
+
+    .cart-item {
+        gap: 10px;
+    }
+
+    .cart-item img {
+        width: 65px;
+        height: 65px;
+        flex-shrink: 0;
+    }
+
+    .cart-item-info h4 {
+        font-size: 14px;
+    }
+
+    .cart-item-info p {
+        font-size: 12px;
+    }
+
+    .cart-item-right strong {
+        font-size: 12px;
+    }
+
+    .cart-footer {
+        padding: 15px;
+    }
+
+    .checkout-button {
+        min-height: 48px;
+    }
+
+
+    /* ===============================
+       MODALS
+    =============================== */
+
+    .modal {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+
+        max-height: 92vh;
+
+        padding: 20px;
+
+        border-radius: 17px;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 13px;
+
+        font-size: 27px;
+    }
+
+
+    /* ===============================
+       PRODUCT MODAL
+    =============================== */
+
+    .product-modal-content {
+        display: block;
+    }
+
+    .modal-product-image {
+        width: 100%;
+        min-height: 250px;
+
+        margin-bottom: 15px;
+    }
+
+    .modal-product-image img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .modal-product-info {
+        padding: 5px 0 10px;
+    }
+
+    .modal-product-info h2 {
+        font-size: 28px;
+        line-height: 1.15;
+    }
+
+    .modal-description {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .modal-features {
+        font-size: 13px;
+    }
+
+    .modal-add-button {
+        min-height: 46px;
+    }
+
+
+    /* ===============================
+       CHECKOUT
+    =============================== */
+
+    .checkout-content {
+        padding: 20px 17px;
+    }
+
+    .checkout-content h2 {
+        font-size: 30px;
+    }
+
+    .checkout-item {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+
+        padding: 12px;
+
+        font-size: 13px;
+    }
+
+    .payment-info {
+        padding: 15px;
+        margin: 20px 0;
+
+        font-size: 12px;
+
+        overflow-wrap: break-word;
+    }
+
+    .payment-info h3 {
+        font-size: 16px;
+    }
+
+    .payment-info button {
+        font-size: 11px;
+    }
+
+    #account-number,
+    #order-reference {
+        word-break: break-word;
+    }
+
+    .checkout-submit {
+        min-height: 48px;
+    }
+
+
+    /* ===============================
+       SUCCESS MODAL
+    =============================== */
+
+    .success-content {
+        padding: 30px 20px;
+    }
+
+    .success-content h2 {
+        font-size: 30px;
+    }
+
+    .success-content #success-message {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* ===============================
+       FOOTER
+    =============================== */
+
+    .site-footer {
+        padding: 45px 20px;
+    }
+
+    .footer-content h2 {
+        font-size: 23px;
+        letter-spacing: 4px;
+    }
+
+    .footer-content p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .product-image {
+        height: 165px;
+    }
+
+    .product-details {
+        padding: 9px;
+    }
+
+    .product-details h3 {
+        font-size: 13px;
+    }
+
+    .product-price {
+        font-size: 12px;
+    }
+
+    .product-actions button {
+        min-height: 36px;
+        font-size: 9px;
+    }
+
+    .read-more {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
 }
