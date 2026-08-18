@@ -19,11 +19,6 @@ body {
     line-height: 1.6;
 }
 
-
-/* =========================================
-   GENERAL
-========================================= */
-
 img {
     max-width: 100%;
 }
@@ -51,8 +46,10 @@ a {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: rgba(255, 250, 249, 0.94);
     backdrop-filter: blur(15px);
+
     border-bottom: 1px solid #f0dddd;
 }
 
@@ -77,11 +74,11 @@ a {
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 35px;
+    gap: 30px;
 }
 
 .main-nav a {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 1px;
     transition: 0.3s ease;
 }
@@ -145,8 +142,8 @@ a {
 
     margin: 35px auto 0;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
 
     overflow: hidden;
 
@@ -165,11 +162,8 @@ a {
 }
 
 .hero-content {
+    width: 60%;
     padding: 80px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .hero-small {
@@ -207,6 +201,8 @@ a {
 .hero-button {
     width: fit-content;
 
+    display: inline-block;
+
     padding: 14px 28px;
 
     border-radius: 30px;
@@ -225,20 +221,6 @@ a {
     background: #5f2f3d;
     transform: translateY(-3px);
     box-shadow: 0 12px 25px rgba(124, 63, 80, 0.22);
-}
-
-.hero-image {
-    min-height: 650px;
-    overflow: hidden;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
 }
 
 
@@ -284,7 +266,7 @@ a {
 
 
 /* =========================================
-   PRODUCTS SECTION
+   PRODUCTS
 ========================================= */
 
 .products-section {
@@ -303,11 +285,6 @@ a {
 
     align-items: stretch;
 }
-
-
-/* =========================================
-   PRODUCT CARD
-========================================= */
 
 .product-card {
     position: relative;
@@ -496,7 +473,7 @@ a {
 
 
 /* =========================================
-   PRETTY GIRLS ROCK
+   BRAND BANNER
 ========================================= */
 
 .brand-banner {
@@ -532,6 +509,316 @@ a {
 
 
 /* =========================================
+   TRACK ORDER
+========================================= */
+
+.tracking-section {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 110px 20px;
+
+    background: #f8f1f3;
+
+    text-align: center;
+}
+
+.tracking-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+.tracking-section h2 {
+    margin-bottom: 18px;
+
+    color: #4b2934;
+
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: normal;
+
+    letter-spacing: -1px;
+}
+
+.tracking-intro {
+    max-width: 560px;
+
+    margin: 0 auto 45px;
+
+    color: #715c62;
+
+    font-family: Arial, sans-serif;
+
+    line-height: 1.8;
+}
+
+.tracking-box {
+    max-width: 570px;
+
+    margin: 0 auto;
+
+    padding: 40px 35px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border: 1px solid rgba(124, 63, 80, 0.08);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(80, 40, 50, 0.10);
+}
+
+.tracking-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3dce3;
+
+    color: #7c3f50;
+
+    font-size: 25px;
+}
+
+.tracking-box h3 {
+    margin-bottom: 10px;
+
+    color: #4b2934;
+
+    font-size: 23px;
+
+    font-weight: normal;
+}
+
+.tracking-box > p {
+    max-width: 430px;
+
+    margin: 0 auto 25px;
+
+    color: #806d72;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.tracking-form {
+    display: flex;
+
+    gap: 10px;
+}
+
+.tracking-form input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 15px 17px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fff;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.tracking-form input:focus {
+    border-color: #c995a5;
+
+    box-shadow:
+        0 0 0 3px rgba(201, 149, 165, 0.12);
+}
+
+.tracking-form button {
+    padding: 15px 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #7c3f50;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+.tracking-form button:hover {
+    background: #5f2f3d;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TRACKING RESULT
+========================================= */
+
+#tracking-result {
+    margin-top: 25px;
+}
+
+.tracking-card {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    text-align: left;
+
+    border-radius: 18px;
+
+    background: #faf7f8;
+
+    border: 1px solid #eadde1;
+}
+
+.tracking-card h3 {
+    margin: 5px 0 20px;
+
+    color: #4b2934;
+
+    font-size: 21px;
+
+    font-weight: normal;
+}
+
+.tracking-status {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    background: #f3dce3;
+}
+
+.tracking-status span {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    opacity: 0.7;
+}
+
+.tracking-status strong {
+    color: #7c3f50;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+.tracking-details {
+    color: #5e4b50;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.tracking-details p {
+    margin: 8px 0;
+}
+
+.tracking-details ul {
+    margin-top: 5px;
+
+    padding-left: 20px;
+}
+
+.tracking-error {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #faf7f8;
+
+    border: 1px solid #eadde1;
+
+    color: #715c62;
+
+    font-family: Arial, sans-serif;
+}
+
+.tracking-error h3 {
+    margin-top: 0;
+
+    color: #4b2934;
+}
+
+
+/* =========================================
+   TRACKING DECORATION
+========================================= */
+
+.tracking-decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    opacity: 0.5;
+}
+
+.tracking-decoration-one {
+    width: 220px;
+    height: 220px;
+
+    top: -80px;
+    left: -80px;
+
+    background: #efd6df;
+}
+
+.tracking-decoration-two {
+    width: 280px;
+    height: 280px;
+
+    right: -120px;
+    bottom: -120px;
+
+    background: #f0dfe5;
+}
+
+
+/* =========================================
    ABOUT
 ========================================= */
 
@@ -548,6 +835,7 @@ a {
 
 .about-content {
     width: min(750px, 92%);
+
     margin: auto;
 
     text-align: center;
@@ -559,6 +847,7 @@ a {
     color: #4b2934;
 
     font-size: clamp(34px, 5vw, 52px);
+
     font-weight: normal;
 }
 
@@ -568,6 +857,7 @@ a {
     color: #715c62;
 
     font-family: Arial, sans-serif;
+
     font-size: 15px;
 }
 
@@ -586,6 +876,7 @@ a {
 
 .contact-content {
     width: min(650px, 92%);
+
     margin: auto;
 }
 
@@ -595,6 +886,7 @@ a {
     color: #4b2934;
 
     font-size: clamp(32px, 4vw, 48px);
+
     font-weight: normal;
 }
 
@@ -602,6 +894,50 @@ a {
     color: #715c62;
 
     font-family: Arial, sans-serif;
+}
+
+.contact-details {
+    margin-top: 30px;
+
+    text-align: center;
+}
+
+.contact-phone {
+    display: inline-block;
+
+    margin: 8px 0 15px;
+
+    color: #7c3f50;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.whatsapp-button {
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 25px;
+
+    background: #7c3f50;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background: #5f2f3d;
+
+    transform: translateY(-2px);
 }
 
 
@@ -613,6 +949,7 @@ a {
     padding: 55px 20px;
 
     background: #4b2934;
+
     color: white;
 
     text-align: center;
@@ -626,11 +963,13 @@ a {
 
 .footer-content p {
     font-family: Arial, sans-serif;
+
     font-size: 13px;
 }
 
 .copyright {
     margin-top: 25px;
+
     opacity: 0.55;
 }
 
@@ -649,6 +988,7 @@ a {
     background: rgba(40, 20, 25, 0.45);
 
     opacity: 0;
+
     visibility: hidden;
 
     transition: 0.3s ease;
@@ -656,6 +996,7 @@ a {
 
 .overlay.active {
     opacity: 1;
+
     visibility: visible;
 }
 
@@ -673,9 +1014,11 @@ a {
     z-index: 3000;
 
     width: min(430px, 92vw);
+
     height: 100vh;
 
     display: flex;
+
     flex-direction: column;
 
     background: #fffafa;
@@ -696,6 +1039,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     padding: 22px;
@@ -713,6 +1057,7 @@ a {
     background: transparent;
 
     font-size: 28px;
+
     color: #6e4852;
 }
 
@@ -740,6 +1085,7 @@ a {
     gap: 12px;
 
     margin-bottom: 15px;
+
     padding-bottom: 15px;
 
     border-bottom: 1px solid #f0dfe2;
@@ -768,6 +1114,7 @@ a {
     color: #7c3f50;
 
     font-family: Arial, sans-serif;
+
     font-size: 13px;
 }
 
@@ -786,6 +1133,7 @@ a {
     height: 26px;
 
     border: 1px solid #e5cbd1;
+
     border-radius: 50%;
 
     background: white;
@@ -793,6 +1141,7 @@ a {
 
 .cart-item-right {
     display: flex;
+
     flex-direction: column;
 
     align-items: flex-end;
@@ -804,6 +1153,7 @@ a {
     color: #7c3f50;
 
     font-family: Arial, sans-serif;
+
     font-size: 13px;
 }
 
@@ -828,6 +1178,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 15px;
@@ -846,12 +1197,15 @@ a {
     min-height: 48px;
 
     border: none;
+
     border-radius: 9px;
 
     background: #7c3f50;
+
     color: white;
 
     font-family: Arial, sans-serif;
+
     font-weight: bold;
 
     transition: 0.3s ease;
@@ -876,7 +1230,9 @@ a {
     z-index: 4000;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 20px;
@@ -884,6 +1240,7 @@ a {
     background: rgba(40, 20, 25, 0.5);
 
     opacity: 0;
+
     visibility: hidden;
 
     transition: 0.3s ease;
@@ -891,6 +1248,7 @@ a {
 
 .modal.active {
     opacity: 1;
+
     visibility: visible;
 }
 
@@ -898,6 +1256,7 @@ a {
     position: relative;
 
     width: min(800px, 95vw);
+
     max-height: 90vh;
 
     overflow-y: auto;
@@ -946,7 +1305,9 @@ a {
     min-height: 400px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 15px;
@@ -971,6 +1332,7 @@ a {
     color: #4b2934;
 
     font-size: 36px;
+
     font-weight: normal;
 }
 
@@ -980,6 +1342,7 @@ a {
     color: #7c3f50;
 
     font-family: Arial, sans-serif;
+
     font-weight: bold;
 }
 
@@ -989,6 +1352,7 @@ a {
     color: #715c62;
 
     font-family: Arial, sans-serif;
+
     font-size: 14px;
 }
 
@@ -998,9 +1362,11 @@ a {
 
 .modal-features {
     margin-bottom: 25px;
+
     padding-left: 20px;
 
     font-family: Arial, sans-serif;
+
     font-size: 14px;
 }
 
@@ -1019,6 +1385,7 @@ a {
     color: #4b2934;
 
     font-size: 34px;
+
     font-weight: normal;
 }
 
@@ -1034,6 +1401,7 @@ a {
     border-bottom: 1px solid #f0dfe2;
 
     font-family: Arial, sans-serif;
+
     font-size: 13px;
 }
 
@@ -1047,7 +1415,9 @@ a {
     margin-bottom: 7px;
 
     font-family: Arial, sans-serif;
+
     font-size: 13px;
+
     font-weight: bold;
 }
 
@@ -1058,6 +1428,7 @@ a {
     padding: 13px;
 
     border: 1px solid #e5cbd1;
+
     border-radius: 8px;
 
     outline: none;
@@ -1074,6 +1445,7 @@ a {
 
 .payment-info {
     margin: 25px 0;
+
     padding: 20px;
 
     border-radius: 12px;
@@ -1081,6 +1453,7 @@ a {
     background: #f9edef;
 
     font-family: Arial, sans-serif;
+
     font-size: 13px;
 }
 
@@ -1100,9 +1473,11 @@ a {
     padding: 9px 14px;
 
     border: 1px solid #7c3f50;
+
     border-radius: 6px;
 
     background: white;
+
     color: #7c3f50;
 }
 
@@ -1123,6 +1498,7 @@ a {
     color: #7c3f50;
 
     font-size: 34px;
+
     font-weight: normal;
 }
 
@@ -1147,6 +1523,10 @@ a {
         padding: 55px;
     }
 
+    .main-nav {
+        gap: 15px;
+    }
+
 }
 
 
@@ -1166,16 +1546,17 @@ a {
 
     .hero {
         width: 94%;
+
         margin-top: 15px;
 
-        grid-template-columns: 1fr;
-
-        min-height: auto;
+        min-height: 500px;
 
         border-radius: 20px;
     }
 
     .hero-content {
+        width: 100%;
+
         padding: 55px 30px;
     }
 
@@ -1183,17 +1564,16 @@ a {
         font-size: 52px;
     }
 
-    .hero-image {
-        min-height: 400px;
-    }
-
     .products-section {
         width: 94%;
+
         padding: 70px 0;
     }
 
     .products-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
         gap: 12px;
     }
 
@@ -1219,6 +1599,7 @@ a {
 
     .brand-banner {
         width: 94%;
+
         margin-bottom: 70px;
     }
 
@@ -1226,8 +1607,42 @@ a {
         height: 220px;
     }
 
+    .tracking-section {
+        padding: 75px 16px;
+    }
+
+    .tracking-box {
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+    .tracking-form {
+        flex-direction: column;
+    }
+
+    .tracking-form input,
+    .tracking-form button {
+        width: 100%;
+
+        min-height: 48px;
+    }
+
+    .tracking-status {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 6px;
+    }
+
+    .tracking-card {
+        padding: 20px;
+    }
+
     .product-modal-content {
         grid-template-columns: 1fr;
+
         gap: 10px;
     }
 
@@ -1276,38 +1691,8 @@ a {
         font-size: 44px;
     }
 
-}.contact-details {
-    margin-top: 30px;
-    text-align: center;
-}
+    .tracking-box {
+        padding: 25px 15px;
+    }
 
-.contact-phone {
-    display: inline-block;
-    margin: 8px 0 15px;
-
-    color: #7c3f50;
-
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.whatsapp-button {
-    display: inline-block;
-
-    padding: 12px 24px;
-
-    border-radius: 25px;
-
-    background: #7c3f50;
-    color: white;
-
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-
-    transition: 0.3s ease;
-}
-
-.whatsapp-button:hover {
-    background: #5f2f3d;
 }
