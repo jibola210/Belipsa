@@ -1,5 +1,6 @@
 /* =========================================
    BELIPSA — COMPLETE SHOPPING SYSTEM
+   WITH SUPABASE ORDER EMAIL NOTIFICATION
 ========================================= */
 
 
@@ -14,10 +15,8 @@ const products = {
         price: 3000,
         image: "images/choco-gloss.jpg.jpeg",
         type: "LIP GLOSS",
-
         description:
             "A smooth and beautiful lip gloss created to give your lips a rich, glossy finish.",
-
         features: [
             "Smooth glossy finish",
             "Comfortable on the lips",
@@ -25,16 +24,13 @@ const products = {
         ]
     },
 
-
     "lip-balm": {
         name: "Lip Balm",
         price: 1500,
         image: "images/lip-balm.jpg.jpeg",
         type: "LIP CARE",
-
         description:
             "A simple everyday lip care essential designed to help keep your lips soft and moisturized.",
-
         features: [
             "Helps keep lips moisturized",
             "Easy everyday lip care",
@@ -42,16 +38,13 @@ const products = {
         ]
     },
 
-
     "lipscrub": {
         name: "Lip Scrub",
         price: 1500,
         image: "images/lipscrub.jpg.jpg",
         type: "LIP CARE",
-
         description:
             "A gentle lip scrub designed to help remove dry skin and leave your lips feeling smoother.",
-
         features: [
             "Gentle exfoliation",
             "Helps remove dry skin",
@@ -59,16 +52,13 @@ const products = {
         ]
     },
 
-
     "pink-nude": {
         name: "Pink Nude and Nude",
         price: 3000,
         image: "images/pink nude and nude.jpg.jpg",
         type: "LIP GLOSS",
-
         description:
             "Beautiful nude-inspired lip gloss shades for a soft and elegant everyday look.",
-
         features: [
             "Beautiful nude tones",
             "Glossy finish",
@@ -76,16 +66,13 @@ const products = {
         ]
     },
 
-
     "wholesale-order": {
         name: "Wholesale Order",
         price: 25000,
         image: "images/wholesales order.jpg.jpg",
         type: "WHOLESALE",
-
         description:
             "A Belipsa wholesale package containing 12 pieces for customers purchasing in bulk.",
-
         features: [
             "12 pieces",
             "Great for resellers",
@@ -93,16 +80,13 @@ const products = {
         ]
     },
 
-
     "barbie-tube": {
         name: "Barbie Tube",
         price: 3000,
         image: "images/barbie tube.jpg.jpg",
         type: "LIP GLOSS",
-
         description:
             "A beautiful Belipsa gloss with a fun and feminine Barbie-inspired look.",
-
         features: [
             "Glossy finish",
             "Stylish tube",
@@ -110,16 +94,13 @@ const products = {
         ]
     },
 
-
     "wand-tube": {
         name: "Wand Tube",
         price: 2500,
         image: "images/wand tube gloss.jpg.jpg",
         type: "LIP GLOSS",
-
         description:
             "A classic lip gloss with an easy-to-use wand applicator for smooth application.",
-
         features: [
             "Easy wand application",
             "Glossy finish",
@@ -127,16 +108,13 @@ const products = {
         ]
     },
 
-
     "red-lip-gloss": {
         name: "Red Lip Gloss",
         price: 3000,
         image: "images/Red Lip Gloss.jpg.jpg",
         type: "LIP GLOSS",
-
         description:
             "A bold red lip gloss created for customers who want their lips to stand out.",
-
         features: [
             "Bold red appearance",
             "Glossy finish",
@@ -183,11 +161,9 @@ function addToCart(productId) {
         return;
     }
 
-
     const existingItem = cart.find(
         item => item.id === productId
     );
-
 
     if (existingItem) {
 
@@ -196,24 +172,11 @@ function addToCart(productId) {
     } else {
 
         cart.push({
-
             id: productId,
-
             quantity: 1
-
         });
 
     }
-
-
-    /*
-       IMPORTANT:
-
-       We update the cart but DO NOT open it.
-
-       The customer must click the cart icon
-       to see the cart.
-    */
 
     updateCart();
 
@@ -238,20 +201,12 @@ function buyNow(productId) {
         return;
     }
 
-
-    /*
-       Buy Now starts checkout immediately.
-    */
-
     cart = [
-
         {
             id: productId,
             quantity: 1
         }
-
     ];
-
 
     updateCart();
 
@@ -281,17 +236,10 @@ function updateCart() {
     }
 
 
-    /* -----------------------------------------
-       CART COUNT
-    ----------------------------------------- */
-
     const totalQuantity = cart.reduce(
-
         (total, item) =>
             total + item.quantity,
-
         0
-
     );
 
 
@@ -302,10 +250,6 @@ function updateCart() {
 
     }
 
-
-    /* -----------------------------------------
-       EMPTY CART
-    ----------------------------------------- */
 
     if (cart.length === 0) {
 
@@ -328,21 +272,16 @@ function updateCart() {
 
         if (cartTotal) {
 
-            cartTotal.textContent = "₦0";
+            cartTotal.textContent =
+                "₦0";
 
         }
-
 
         return;
     }
 
 
-    /* -----------------------------------------
-       DISPLAY CART
-    ----------------------------------------- */
-
     cartItems.innerHTML = "";
-
 
     let total = 0;
 
@@ -351,7 +290,6 @@ function updateCart() {
 
         const product =
             products[item.id];
-
 
         if (!product) {
             return;
@@ -381,7 +319,6 @@ function updateCart() {
                 alt="${product.name}"
             >
 
-
             <div class="cart-item-info">
 
                 <h4>
@@ -392,7 +329,6 @@ function updateCart() {
                     ${formatMoney(product.price)}
                 </p>
 
-
                 <div class="quantity-controls">
 
                     <button
@@ -402,11 +338,9 @@ function updateCart() {
                         −
                     </button>
 
-
                     <span>
                         ${item.quantity}
                     </span>
-
 
                     <button
                         type="button"
@@ -419,13 +353,11 @@ function updateCart() {
 
             </div>
 
-
             <div class="cart-item-right">
 
                 <strong>
                     ${formatMoney(itemTotal)}
                 </strong>
-
 
                 <button
                     type="button"
@@ -440,9 +372,7 @@ function updateCart() {
         `;
 
 
-        cartItems.appendChild(
-            cartItem
-        );
+        cartItems.appendChild(cartItem);
 
     });
 
@@ -467,10 +397,8 @@ function changeQuantity(
 ) {
 
     const item = cart.find(
-
         item =>
             item.id === productId
-
     );
 
 
@@ -485,10 +413,8 @@ function changeQuantity(
     if (item.quantity <= 0) {
 
         cart = cart.filter(
-
             item =>
                 item.id !== productId
-
         );
 
     }
@@ -506,12 +432,9 @@ function changeQuantity(
 function removeFromCart(productId) {
 
     cart = cart.filter(
-
         item =>
             item.id !== productId
-
     );
-
 
     updateCart();
 
@@ -528,7 +451,6 @@ function openCart() {
         document.getElementById(
             "cart-sidebar"
         );
-
 
     const overlay =
         document.getElementById(
@@ -566,7 +488,6 @@ function closeCart() {
         document.getElementById(
             "cart-sidebar"
         );
-
 
     const overlay =
         document.getElementById(
@@ -637,30 +558,25 @@ function showProduct(productId) {
             "product-modal"
         );
 
-
     const modalImage =
         document.getElementById(
             "modal-image"
         );
-
 
     const modalName =
         document.getElementById(
             "modal-name"
         );
 
-
     const modalPrice =
         document.getElementById(
             "modal-price"
         );
 
-
     const modalDescription =
         document.getElementById(
             "modal-description"
         );
-
 
     const modalFeatures =
         document.getElementById(
@@ -668,21 +584,29 @@ function showProduct(productId) {
         );
 
 
+    if (
+        !modal ||
+        !modalImage ||
+        !modalName ||
+        !modalPrice ||
+        !modalDescription ||
+        !modalFeatures
+    ) {
+        return;
+    }
+
+
     modalImage.src =
         product.image;
-
 
     modalImage.alt =
         product.name;
 
-
     modalName.textContent =
         product.name;
 
-
     modalPrice.textContent =
         formatMoney(product.price);
-
 
     modalDescription.textContent =
         product.description;
@@ -699,10 +623,8 @@ function showProduct(productId) {
                     "li"
                 );
 
-
             li.textContent =
                 feature;
-
 
             modalFeatures.appendChild(
                 li
@@ -718,14 +640,18 @@ function showProduct(productId) {
         );
 
 
-    modalCartButton.onclick =
-        function () {
+    if (modalCartButton) {
 
-            addToCart(productId);
+        modalCartButton.onclick =
+            function () {
 
-            closeProduct();
+                addToCart(productId);
 
-        };
+                closeProduct();
+
+            };
+
+    }
 
 
     modal.classList.add(
@@ -776,9 +702,7 @@ function openCheckout() {
 
     closeCart();
 
-
     renderCheckout();
-
 
     generateOrderReference();
 
@@ -811,7 +735,6 @@ function renderCheckout() {
             "checkout-items"
         );
 
-
     const checkoutTotal =
         document.getElementById(
             "checkout-total"
@@ -824,7 +747,6 @@ function renderCheckout() {
 
 
     checkoutItems.innerHTML = "";
-
 
     let total = 0;
 
@@ -856,7 +778,6 @@ function renderCheckout() {
                     ${product.name}
                     × ${item.quantity}
                 </span>
-
 
                 <strong>
                     ${formatMoney(itemTotal)}
@@ -1002,6 +923,11 @@ function saveOrderForTracking(order) {
 
     } catch (error) {
 
+        console.error(
+            "Could not read saved orders:",
+            error
+        );
+
         orders = [];
 
     }
@@ -1011,12 +937,89 @@ function saveOrderForTracking(order) {
 
 
     localStorage.setItem(
-
         "belipsaOrders",
-
         JSON.stringify(orders)
-
     );
+
+}
+
+
+/* =========================================
+   SEND ORDER EMAIL
+========================================= */
+
+async function sendOrderEmail(orderData) {
+
+    if (
+        !window.supabaseClient ||
+        !window.supabaseClient.functions
+    ) {
+
+        console.error(
+            "Supabase client is not available."
+        );
+
+        return {
+            success: false,
+            error: "Supabase client unavailable."
+        };
+
+    }
+
+
+    try {
+
+        const {
+            data,
+            error
+        } =
+            await window.supabaseClient.functions.invoke(
+                "send-order-email",
+                {
+                    body: orderData
+                }
+            );
+
+
+        if (error) {
+
+            console.error(
+                "Belipsa email error:",
+                error
+            );
+
+            return {
+                success: false,
+                error: error
+            };
+
+        }
+
+
+        console.log(
+            "Belipsa order email sent:",
+            data
+        );
+
+
+        return {
+            success: true,
+            data: data
+        };
+
+    } catch (error) {
+
+        console.error(
+            "Order email request failed:",
+            error
+        );
+
+        return {
+            success: false,
+            error: error
+        };
+
+    }
 
 }
 
@@ -1025,7 +1028,7 @@ function saveOrderForTracking(order) {
    SUBMIT ORDER
 ========================================= */
 
-function submitOrder(event) {
+async function submitOrder(event) {
 
     event.preventDefault();
 
@@ -1061,7 +1064,7 @@ function submitOrder(event) {
     const reference =
         document.getElementById(
             "order-reference"
-        ).textContent;
+        ).textContent.trim();
 
 
     if (
@@ -1078,44 +1081,60 @@ function submitOrder(event) {
     }
 
 
+    /* -----------------------------------------
+       CALCULATE ORDER
+    ----------------------------------------- */
+
     let total = 0;
 
 
     const orderItems =
-        cart.map(item => {
+        cart
+            .map(item => {
 
-            const product =
-                products[item.id];
-
-
-            const itemTotal =
-                product.price *
-                item.quantity;
+                const product =
+                    products[item.id];
 
 
-            total += itemTotal;
+                if (!product) {
+                    return null;
+                }
 
 
-            return {
+                const itemTotal =
+                    product.price *
+                    item.quantity;
 
-                productId: item.id,
 
-                product:
-                    product.name,
+                total += itemTotal;
 
-                quantity:
-                    item.quantity,
 
-                price:
-                    product.price,
+                return {
 
-                total:
-                    itemTotal
+                    productId:
+                        item.id,
 
-            };
+                    product:
+                        product.name,
 
-        });
+                    quantity:
+                        item.quantity,
 
+                    price:
+                        product.price,
+
+                    total:
+                        itemTotal
+
+                };
+
+            })
+            .filter(Boolean);
+
+
+    /* -----------------------------------------
+       CREATE ORDER
+    ----------------------------------------- */
 
     const orderData = {
 
@@ -1146,26 +1165,51 @@ function submitOrder(event) {
     };
 
 
-    /*
-       Save order locally for now.
-
-       This allows the tracking page to
-       find the order on the same browser.
-    */
-
-    saveOrderForTracking(
-        orderData
-    );
-
-
     console.log(
         "BELIPSA ORDER:",
         orderData
     );
 
 
+    /* -----------------------------------------
+       SAVE ORDER FOR TRACKING
+    ----------------------------------------- */
+
+    saveOrderForTracking(
+        orderData
+    );
+
+
+    /* -----------------------------------------
+       SEND EMAIL TO BELIPSA
+    ----------------------------------------- */
+
+    const emailResult =
+        await sendOrderEmail(
+            orderData
+        );
+
+
+    if (!emailResult.success) {
+
+        console.warn(
+            "Order saved, but email notification failed.",
+            emailResult.error
+        );
+
+    }
+
+
+    /* -----------------------------------------
+       CLOSE CHECKOUT
+    ----------------------------------------- */
+
     closeCheckout();
 
+
+    /* -----------------------------------------
+       SHOW SUCCESS
+    ----------------------------------------- */
 
     showSuccess(
         reference,
@@ -1173,11 +1217,18 @@ function submitOrder(event) {
     );
 
 
-    cart = [];
+    /* -----------------------------------------
+       CLEAR CART
+    ----------------------------------------- */
 
+    cart = [];
 
     updateCart();
 
+
+    /* -----------------------------------------
+       RESET FORM
+    ----------------------------------------- */
 
     const form =
         document.getElementById(
@@ -1227,11 +1278,9 @@ function showSuccess(
             <strong>${name}</strong>.
         </p>
 
-
         <p style="margin-top:10px;">
             Your order has been received.
         </p>
-
 
         <p style="margin-top:15px;">
 
@@ -1246,7 +1295,6 @@ function showSuccess(
             </span>
 
         </p>
-
 
         <p style="margin-top:15px;">
 
@@ -1352,6 +1400,11 @@ function trackOrder(event) {
 
     } catch (error) {
 
+        console.error(
+            "Could not read orders:",
+            error
+        );
+
         orders = [];
 
     }
@@ -1359,13 +1412,12 @@ function trackOrder(event) {
 
     const order =
         orders.find(
-
             item =>
                 String(
                     item.reference
-                ).toUpperCase()
+                )
+                    .toUpperCase()
                 === reference
-
         );
 
 
@@ -1379,13 +1431,11 @@ function trackOrder(event) {
                     Order not found
                 </strong>
 
-
                 <p>
                     We couldn't find an order
                     with reference
                     <strong>${reference}</strong>.
                 </p>
-
 
                 <p>
                     Please check your reference
@@ -1408,13 +1458,11 @@ function trackOrder(event) {
                 Order Found
             </h3>
 
-
             <p class="tracking-reference">
 
                 ${order.reference}
 
             </p>
-
 
             <div class="order-status">
 
@@ -1423,7 +1471,6 @@ function trackOrder(event) {
                 ${order.status}
 
             </div>
-
 
             <div class="tracking-details">
 
@@ -1439,7 +1486,6 @@ function trackOrder(event) {
 
                 </p>
 
-
                 <p>
 
                     <strong>
@@ -1451,7 +1497,6 @@ function trackOrder(event) {
                     ${formatMoney(order.total)}
 
                 </p>
-
 
                 <p>
 
@@ -1505,6 +1550,10 @@ document.addEventListener(
     function () {
 
         updateCart();
+
+        console.log(
+            "Belipsa shopping system loaded."
+        );
 
     }
 );

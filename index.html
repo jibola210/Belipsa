@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +65,6 @@
                 onclick="openCart()"
                 aria-label="Open shopping cart"
             >
-
                 🛍️
 
                 <span id="cart-count">
@@ -153,9 +153,7 @@
             <div class="products-grid">
 
 
-                <!-- =================================
-                     CHOCO GLOSS
-                ================================== -->
+                <!-- CHOCO GLOSS -->
 
                 <article class="product-card">
 
@@ -215,9 +213,7 @@
                 </article>
 
 
-                <!-- =================================
-                     LIP BALM
-                ================================== -->
+                <!-- LIP BALM -->
 
                 <article class="product-card">
 
@@ -277,9 +273,7 @@
                 </article>
 
 
-                <!-- =================================
-                     LIP SCRUB
-                ================================== -->
+                <!-- LIP SCRUB -->
 
                 <article class="product-card">
 
@@ -339,9 +333,7 @@
                 </article>
 
 
-                <!-- =================================
-                     PINK NUDE
-                ================================== -->
+                <!-- PINK NUDE -->
 
                 <article class="product-card">
 
@@ -401,9 +393,7 @@
                 </article>
 
 
-                <!-- =================================
-                     WHOLESALE
-                ================================== -->
+                <!-- WHOLESALE -->
 
                 <article class="product-card">
 
@@ -463,9 +453,7 @@
                 </article>
 
 
-                <!-- =================================
-                     BARBIE TUBE
-                ================================== -->
+                <!-- BARBIE TUBE -->
 
                 <article class="product-card">
 
@@ -525,9 +513,7 @@
                 </article>
 
 
-                <!-- =================================
-                     WAND TUBE
-                ================================== -->
+                <!-- WAND TUBE -->
 
                 <article class="product-card">
 
@@ -587,9 +573,7 @@
                 </article>
 
 
-                <!-- =================================
-                     RED LIP GLOSS
-                ================================== -->
+                <!-- RED LIP GLOSS -->
 
                 <article class="product-card">
 
@@ -648,7 +632,6 @@
 
                 </article>
 
-
             </div>
 
         </section>
@@ -679,7 +662,6 @@
                     the latest status of your order.
                 </p>
 
-
                 <div class="tracking-box">
 
                     <div class="tracking-icon">
@@ -695,14 +677,11 @@
                         after placing your order.
                     </p>
 
-
                     <form
                         onsubmit="trackOrder(event)"
                     >
 
-                        <label
-                            for="tracking-reference"
-                        >
+                        <label for="tracking-reference">
                             Order Reference
                         </label>
 
@@ -724,10 +703,7 @@
 
                     </form>
 
-
-                    <div
-                        id="tracking-result"
-                    ></div>
+                    <div id="tracking-result"></div>
 
                 </div>
 
@@ -799,7 +775,6 @@
                     Contact Belipsa.
                 </p>
 
-
                 <div class="contact-details">
 
                     <p>
@@ -807,7 +782,6 @@
                             Phone / WhatsApp
                         </strong>
                     </p>
-
 
                     <a
                         href="https://wa.me/2349073958997"
@@ -819,7 +793,6 @@
                     </a>
 
                     <br>
-
 
                     <a
                         href="https://wa.me/2349073958997"
@@ -874,7 +847,6 @@
 
         </div>
 
-
         <div
             id="cart-items"
             class="cart-items"
@@ -894,7 +866,6 @@
 
         </div>
 
-
         <div class="cart-footer">
 
             <div class="cart-total-row">
@@ -908,7 +879,6 @@
                 </strong>
 
             </div>
-
 
             <button
                 type="button"
@@ -942,7 +912,6 @@
                 ×
             </button>
 
-
             <div class="modal-product-image">
 
                 <img
@@ -952,7 +921,6 @@
                 >
 
             </div>
-
 
             <div class="modal-product-info">
 
@@ -978,17 +946,14 @@
                     Product description
                 </p>
 
-
                 <h4>
                     Product Details
                 </h4>
-
 
                 <ul
                     id="modal-features"
                     class="modal-features"
                 ></ul>
-
 
                 <button
                     type="button"
@@ -1024,17 +989,14 @@
                 ×
             </button>
 
-
             <h2>
                 Checkout
             </h2>
-
 
             <div
                 id="checkout-items"
                 class="checkout-items"
             ></div>
-
 
             <div class="checkout-total-row">
 
@@ -1047,7 +1009,6 @@
                 </strong>
 
             </div>
-
 
             <form
                 id="checkout-form"
@@ -1068,7 +1029,6 @@
 
                 </div>
 
-
                 <div class="form-group">
 
                     <label for="customer-phone">
@@ -1082,7 +1042,6 @@
                     >
 
                 </div>
-
 
                 <div class="form-group">
 
@@ -1098,7 +1057,6 @@
 
                 </div>
 
-
                 <div class="payment-info">
 
                     <h3>
@@ -1110,7 +1068,6 @@
                         the bank details provided by
                         Belipsa.
                     </p>
-
 
                     <p>
 
@@ -1124,14 +1081,12 @@
 
                     </p>
 
-
                     <button
                         type="button"
                         onclick="copyAccountNumber()"
                     >
                         Copy Account Number
                     </button>
-
 
                     <p>
 
@@ -1146,7 +1101,6 @@
                     </p>
 
                 </div>
-
 
                 <button
                     type="submit"
@@ -1177,13 +1131,11 @@
                 Order Received
             </h2>
 
-
             <div id="success-message">
 
                 Thank you for your order.
 
             </div>
-
 
             <button
                 type="button"
@@ -1224,7 +1176,34 @@
 
 
     <!-- =========================================
-         JAVASCRIPT
+         SUPABASE
+    ========================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+
+        const SUPABASE_URL =
+            "https://gglfhhuybpiyjkvowhsv.supabase.co";
+
+        const SUPABASE_PUBLISHABLE_KEY =
+            "sb_publishable_ms4EGg7ejEh7B3SHcEhp0Q_iucletv2";
+
+        window.supabaseClient =
+            window.supabase.createClient(
+                SUPABASE_URL,
+                SUPABASE_PUBLISHABLE_KEY
+            );
+
+        console.log(
+            "Belipsa Supabase connected."
+        );
+
+    </script>
+
+
+    <!-- =========================================
+         BELIPSA JAVASCRIPT
     ========================================== -->
 
     <script src="script.js"></script>
@@ -1232,3 +1211,4 @@
 </body>
 
 </html>
+```
