@@ -78,7 +78,7 @@ Deno.serve(async (req) => {
           .join("")
       : `
           <tr>
-            <td colspan="4">
+            <td colspan="4" style="padding:10px;">
               No products found.
             </td>
           </tr>
@@ -98,8 +98,9 @@ Deno.serve(async (req) => {
           from:
             "Belipsa Orders <onboarding@resend.dev>",
 
+          // TEMPORARY TEST RECIPIENT
           to: [
-            "belipsa29@gmail.com"
+            "agboladeridwan174@gmail.com"
           ],
 
           subject:
@@ -126,9 +127,7 @@ Deno.serve(async (req) => {
                   border-radius:12px;
                 ">
 
-                  <h1 style="
-                    margin-top:0;
-                  ">
+                  <h1 style="margin-top:0;">
                     🔔 New Belipsa Order
                   </h1>
 

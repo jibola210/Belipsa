@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,7 +83,6 @@
 
     <main>
 
-
         <!-- =====================================
              HERO
         ====================================== -->
@@ -151,7 +149,6 @@
 
 
             <div class="products-grid">
-
 
                 <!-- CHOCO GLOSS -->
 
@@ -677,9 +674,7 @@
                         after placing your order.
                     </p>
 
-                    <form
-                        onsubmit="trackOrder(event)"
-                    >
+                    <form onsubmit="trackOrder(event)">
 
                         <label for="tracking-reference">
                             Order Reference
@@ -1132,9 +1127,7 @@
             </h2>
 
             <div id="success-message">
-
                 Thank you for your order.
-
             </div>
 
             <button
@@ -1179,8 +1172,13 @@
          SUPABASE
     ========================================== -->
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- Supabase JavaScript Library -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
 
+
+    <!-- Belipsa Supabase Connection -->
     <script>
 
         const SUPABASE_URL =
@@ -1211,4 +1209,3 @@
 </body>
 
 </html>
-```
