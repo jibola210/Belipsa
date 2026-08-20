@@ -181,32 +181,30 @@ a {
   
     z-index: 2;  
 }  
-  
-.hero-overlay {  
-    position: relative;  
-  
-    z-index: 3;  
-  
-    width: 60%;  
-  
-    padding: 80px;  
-  
-    color: white;  
-}  
-  
-.hero-small {  
-    color: white;  
-}  
-  
-.hero h1 {  
-    color: white;  
-}  
-  
-.hero-text {  
-    color: white;  
-}  
-  
-  
+ .hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 80px;
+    max-width: 700px;
+
+    /* Dark luxury overlay */
+    background: linear-gradient(
+        90deg,
+        rgba(20, 7, 12, 0.88) 0%,
+        rgba(35, 10, 20, 0.78) 45%,
+        rgba(35, 10, 20, 0.35) 75%,
+        rgba(35, 10, 20, 0.05) 100%
+    );
+
+    color: #fff;
+    z-index: 2;
+} 
+
 /* =========================================  
    SECTION HEADING  
 ========================================= */  
@@ -2374,128 +2372,68 @@ a {
     position: relative;  
     z-index: 2;  
 }  
-  /* =========================================
-   BELIPSA HERO — MOBILE FINAL LOOK
-   DIM + LUXURY FIT
-========================================= */
-
-@media (max-width: 700px) {
-
-    .hero {
-        width: 94%;
-        height: 500px;
-        min-height: 500px;
-
-        margin: 15px auto 0;
-
-        position: relative;
-        overflow: hidden;
-
-        border-radius: 20px;
-
-        background-image:
-            linear-gradient(
-                rgba(45, 25, 32, 0.28),
-                rgba(45, 25, 32, 0.28)
-            ),
-            url("images/hero.jpg.jpeg");
-
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        display: flex;
-        align-items: flex-end;
-
-        box-shadow:
-            0 18px 50px rgba(70, 35, 45, 0.14);
-    }
-
-    .hero-content {
-        width: 100%;
-
-        padding: 32px 22px 30px;
-
-        background:
-            linear-gradient(
-                to bottom,
-                rgba(45, 25, 32, 0) 0%,
-                rgba(45, 25, 32, 0.25) 25%,
-                rgba(45, 25, 32, 0.68) 100%
-            );
-
-        color: white;
-    }
-
-    .hero-small {
-        color: #f3d5de;
-
-        font-size: 10px;
-        letter-spacing: 2.5px;
-    }
-
-    .hero h1 {
-        color: #fff;
-
-        font-size: 40px;
-        line-height: 0.98;
-
-        text-shadow:
-            0 2px 12px rgba(40, 20, 25, 0.25);
-    }
-
-    .hero-text {
-        max-width: 300px;
-
-        color: #f8e9ed;
-
-        font-size: 13px;
-        line-height: 1.6;
-    }
-
-    .hero-button {
-        background: #fff7f8;
-        color: #7c3f50;
-
-        border: none;
-
-        box-shadow:
-            0 8px 20px rgba(40, 20, 25, 0.15);
-    }
-
-    .hero-button:hover {
-        background: #f3dce3;
-        color: #5f2f3d;
-    }
-}
-
-
-/* =========================================
-   SMALLER PHONES
-========================================= */
-
-@media (max-width: 400px) {
-
-    .hero {
-        height: 460px;
-        min-height: 460px;
-
-        background-position: center;
-    }
-
-    .hero-content {
-        padding: 28px 20px 27px;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero-text {
-        font-size: 12px;
-    }
-}
-
+  
+/* =========================================  
+   MOBILE HERO  
+========================================= */  
+  
+@media (max-width: 700px) {  
+  
+    .hero {  
+        width: 94%;  
+  
+        min-height: 500px;  
+  
+        margin: 15px auto 0;  
+  
+        border-radius: 20px;  
+  
+        background-size: cover;  
+        background-position: center top;  
+    }  
+  
+    .hero-content {  
+        width: 100%;  
+  
+        padding: 45px 24px;  
+  
+        display: flex;  
+        flex-direction: column;  
+        justify-content: flex-end;  
+  
+        min-height: 500px;  
+  
+        background: linear-gradient(  
+            to bottom,  
+            rgba(255,255,255,0.05) 20%,  
+            rgba(255,250,249,0.82) 75%,  
+            rgba(255,250,249,0.96) 100%  
+        );  
+    }  
+  
+    .hero-small {  
+        font-size: 10px;  
+        letter-spacing: 2.5px;  
+        margin-bottom: 12px;  
+    }  
+  
+    .hero h1 {  
+        font-size: 42px;  
+        line-height: 1;  
+        margin-bottom: 18px;  
+    }  
+  
+    .hero-text {  
+        font-size: 13px;  
+        line-height: 1.6;  
+        margin-bottom: 22px;  
+    }  
+  
+    .hero-button {  
+        padding: 12px 22px;  
+        font-size: 11px;  
+    }  
+}  
   
   
 /* =========================================  
@@ -2969,4 +2907,4 @@ a {
     .hero h1 {  
         font-size: 36px;  
     }  
-}
+}this is my css include the adustmet and send me the ckeaneer verwion  now only add the obect part in this no mistakea
