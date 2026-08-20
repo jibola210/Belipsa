@@ -47,9 +47,7 @@ Deno.serve(async (req) => {
     const resendApiKey = Deno.env.get("RESEND_API_KEY");
 
     if (!resendApiKey) {
-      throw new Error(
-        "RESEND_API_KEY is not configured."
-      );
+      throw new Error("RESEND_API_KEY is not configured.");
     }
 
     const itemsHtml = Array.isArray(items)
@@ -60,15 +58,12 @@ Deno.serve(async (req) => {
                 <td style="padding:10px;border-bottom:1px solid #eee;">
                   ${item.product}
                 </td>
-
                 <td style="padding:10px;border-bottom:1px solid #eee;">
                   ${item.quantity}
                 </td>
-
                 <td style="padding:10px;border-bottom:1px solid #eee;">
                   ₦${Number(item.price).toLocaleString("en-NG")}
                 </td>
-
                 <td style="padding:10px;border-bottom:1px solid #eee;">
                   ₦${Number(item.total).toLocaleString("en-NG")}
                 </td>
@@ -84,6 +79,133 @@ Deno.serve(async (req) => {
           </tr>
         `;
 
+    const emailHtml = `
+      <!DOCTYPE html>
+      <html>
+        <body style="
+          margin:0;
+          padding:20px;
+          background:#f7f7f7;
+          font-family:Arial,sans-serif;
+          color:#222;
+        ">
+
+          <div style="
+            max-width:650px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:12px;
+          ">
+
+            <h1>🔔 New Belipsa Order</h1>
+
+            <p>
+              A new order has been placed on the Belipsa website.
+            </p>
+
+            <hr>
+
+            <h2>Order Details</h2>
+
+            <p>
+              <strong>Order Reference:</strong>
+              ${reference}
+            </p>
+
+            <p>
+              <strong>Payment Status:</strong>
+              ${status || "Payment Pending"}
+            </p>
+
+            <h2>Customer Details</h2>
+
+            <p>
+              <strong>Name:</strong>
+              ${customerName}
+            </p>
+
+            <p>
+              <strong>Phone:</strong>
+              ${phone}
+            </p>
+
+            <p>
+              <strong>Delivery Address:</strong>
+              ${address}
+            </p>
+
+            <h2>Products</h2>
+
+            <table style="
+              width:100%;
+              border-collapse:collapse;
+            ">
+
+              <thead>
+                <tr>
+
+                  <th style="
+                    text-align:left;
+                    padding:10px;
+                    border-bottom:2px solid #222;
+                  ">
+                    Product
+                  </th>
+
+                  <th style="
+                    text-align:left;
+                    padding:10px;
+                    border-bottom:2px solid #222;
+                  ">
+                    Qty
+                  </th>
+
+                  <th style="
+                    text-align:left;
+                    padding:10px;
+                    border-bottom:2px solid #222;
+                  ">
+                    Price
+                  </th>
+
+                  <th style="
+                    text-align:left;
+                    padding:10px;
+                    border-bottom:2px solid #222;
+                  ">
+                    Total
+                  </th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                ${itemsHtml}
+              </tbody>
+
+            </table>
+
+            <hr>
+
+            <h2>
+              Total: ₦${Number(total).toLocaleString("en-NG")}
+            </h2>
+
+            <p>
+              Please verify the customer's payment before processing this order.
+            </p>
+
+            <p>
+              — Belipsa
+            </p>
+
+          </div>
+
+        </body>
+      </html>
+    `;
+
     const emailResponse = await fetch(
       "https://api.resend.com/emails",
       {
@@ -95,171 +217,15 @@ Deno.serve(async (req) => {
         },
 
         body: JSON.stringify({
-          from:
-            "Belipsa Orders <onboarding@resend.dev>",
+          from: "Belipsa Orders <onboarding@resend.dev>",
 
-          // TEMPORARY TEST RECIPIENT
           to: [
             "agboladeridwan174@gmail.com"
           ],
 
-          subject:
-            `🔔 New Belipsa Order — ${reference}`,
+          subject: `🔔 New Belipsa Order — ${reference}`,
 
-          html: `
-            <!DOCTYPE html>
-
-            <html>
-
-              <body style="
-                margin:0;
-                padding:20px;
-                background:#f7f7f7;
-                font-family:Arial,sans-serif;
-                color:#222;
-              ">
-
-                <div style="
-                  max-width:650px;
-                  margin:auto;
-                  background:white;
-                  padding:30px;
-                  border-radius:12px;
-                ">
-
-                  <h1 style="margin-top:0;">
-                    🔔 New Belipsa Order
-                  </h1>
-
-                  <p>
-                    A new order has been placed
-                    on the Belipsa website.
-                  </p>
-
-                  <hr>
-
-                  <h2>
-                    Order Details
-                  </h2>
-
-                  <p>
-                    <strong>
-                      Order Reference:
-                    </strong>
-                    ${reference}
-                  </p>
-
-                  <p>
-                    <strong>
-                      Payment Status:
-                    </strong>
-                    ${status || "Payment Pending"}
-                  </p>
-
-                  <h2>
-                    Customer Details
-                  </h2>
-
-                  <p>
-                    <strong>
-                      Name:
-                    </strong>
-                    ${customerName}
-                  </p>
-
-                  <p>
-                    <strong>
-                      Phone:
-                    </strong>
-                    ${phone}
-                  </p>
-
-                  <p>
-                    <strong>
-                      Delivery Address:
-                    </strong>
-                    ${address}
-                  </p>
-
-                  <h2>
-                    Products
-                  </h2>
-
-                  <table style="
-                    width:100%;
-                    border-collapse:collapse;
-                  ">
-
-                    <thead>
-
-                      <tr>
-
-                        <th style="
-                          text-align:left;
-                          padding:10px;
-                          border-bottom:2px solid #222;
-                        ">
-                          Product
-                        </th>
-
-                        <th style="
-                          text-align:left;
-                          padding:10px;
-                          border-bottom:2px solid #222;
-                        ">
-                          Qty
-                        </th>
-
-                        <th style="
-                          text-align:left;
-                          padding:10px;
-                          border-bottom:2px solid #222;
-                        ">
-                          Price
-                        </th>
-
-                        <th style="
-                          text-align:left;
-                          padding:10px;
-                          border-bottom:2px solid #222;
-                        ">
-                          Total
-                        </th>
-
-                      </tr>
-
-                    </thead>
-
-                    <tbody>
-
-                      ${itemsHtml}
-
-                    </tbody>
-
-                  </table>
-
-                  <hr>
-
-                  <h2>
-                    Total:
-                    ₦${Number(total).toLocaleString("en-NG")}
-                  </h2>
-
-                  <p>
-                    Please verify the customer's payment
-                    before processing this order.
-                  </p>
-
-                  <p>
-                    — Belipsa
-                  </p>
-
-                </div>
-
-              </body>
-
-            </html>
-          `,
+          html: emailHtml,
         }),
       }
     );
@@ -281,26 +247,28 @@ Deno.serve(async (req) => {
           status: emailResponse.status,
           headers: {
             ...corsHeaders,
-            "Content-Type":
-              "application/json",
+            "Content-Type": "application/json",
           },
         }
       );
     }
 
+    console.log(
+      "Belipsa order email sent successfully:",
+      result
+    );
+
     return new Response(
       JSON.stringify({
         success: true,
-        message:
-          "Belipsa order email sent successfully.",
+        message: "Belipsa order email sent successfully.",
         data: result,
       }),
       {
         status: 200,
         headers: {
           ...corsHeaders,
-          "Content-Type":
-            "application/json",
+          "Content-Type": "application/json",
         },
       }
     );
@@ -324,8 +292,7 @@ Deno.serve(async (req) => {
         status: 500,
         headers: {
           ...corsHeaders,
-          "Content-Type":
-            "application/json",
+          "Content-Type": "application/json",
         },
       }
     );
