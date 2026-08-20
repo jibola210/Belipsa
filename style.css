@@ -2351,7 +2351,46 @@ a {
     object-fit: cover;
     object-position: center;
 }
+/* =========================================
+   HERO — FITTED IMAGE
+========================================= */
 
+.hero {
+    width: min(1200px, 92%);
+    min-height: 600px;
+
+    margin: 35px auto 0;
+
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            rgba(249, 233, 236, 0.72),
+            rgba(249, 233, 236, 0.72)
+        ),
+        url("images/hero.jpg.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow:
+        0 20px 60px rgba(100, 50, 65, 0.08);
+}
+
+.hero-content {
+    width: 55%;
+    padding: 70px;
+
+    position: relative;
+    z-index: 2;
+}
 
 /* =========================================
    MOBILE HERO
@@ -2360,29 +2399,63 @@ a {
 @media (max-width: 700px) {
 
     .hero {
-        display: flex;
-        flex-direction: column;
+        width: 94%;
+
+        min-height: 500px;
+
+        margin: 15px auto 0;
+
+        border-radius: 20px;
+
+        background-size: cover;
+        background-position: center top;
     }
 
     .hero-content {
         width: 100%;
-        padding: 45px 25px 35px;
+
+        padding: 45px 24px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        min-height: 500px;
+
+        background: linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.05) 20%,
+            rgba(255,250,249,0.82) 75%,
+            rgba(255,250,249,0.96) 100%
+        );
     }
 
-    .hero-image {
-        width: 100%;
-        min-height: 360px;
-        height: 360px;
-        order: 2;
+    .hero-small {
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        margin-bottom: 12px;
     }
 
-    .hero-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1;
+        margin-bottom: 18px;
     }
-}/* =========================================
+
+    .hero-text {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 22px;
+    }
+
+    .hero-button {
+        padding: 12px 22px;
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
    BELIPSA — FULL BACKGROUND HERO
 ========================================= */
 
