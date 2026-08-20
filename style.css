@@ -2317,4 +2317,324 @@ a {
         font-size: 28px;
     }
 
+}/* =========================================
+   BELIPSA — HERO IMAGE
+========================================= */
+
+.hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    padding: 0;
+}
+
+.hero-content {
+    width: 100%;
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    min-height: 650px;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* =========================================
+   MOBILE HERO
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 45px 25px 35px;
+    }
+
+    .hero-image {
+        width: 100%;
+        min-height: 360px;
+        height: 360px;
+        order: 2;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}/* =========================================
+   BELIPSA — FULL BACKGROUND HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    width: min(1200px, 92%);
+    min-height: 650px;
+
+    margin: 35px auto 0;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #f9e9ec;
+
+    box-shadow:
+        0 20px 60px rgba(100, 50, 65, 0.08);
+}
+
+
+/* HERO IMAGE BACKGROUND */
+
+.hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* DARK/PINK OVERLAY */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 250, 249, 0.92) 0%,
+            rgba(255, 250, 249, 0.78) 35%,
+            rgba(255, 250, 249, 0.30) 65%,
+            rgba(255, 250, 249, 0.05) 100%
+        );
+}
+
+
+/* HERO TEXT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 60%;
+
+    padding: 80px;
+}
+
+
+/* =========================================
+   MOBILE HERO
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        width: 94%;
+
+        min-height: 580px;
+
+        margin-top: 15px;
+
+        border-radius: 20px;
+
+        display: flex;
+
+        align-items: flex-end;
+    }
+
+    .hero-image {
+        position: absolute;
+
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-image img {
+        object-fit: cover;
+
+        object-position: center;
+    }
+
+    .hero::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 250, 249, 0.05) 0%,
+                rgba(255, 250, 249, 0.20) 35%,
+                rgba(255, 250, 249, 0.88) 70%,
+                rgba(255, 250, 249, 0.97) 100%
+            );
+    }
+
+    .hero-content {
+        width: 100%;
+
+        padding: 35px 25px 40px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+}/* =========================================
+   BELIPSA BRAND SHOWCASE
+========================================= */
+
+.belipsa-showcase {
+    width: min(1200px, 92%);
+    margin: 0 auto 100px;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: #f7e3e8;
+
+    box-shadow:
+        0 20px 60px rgba(80, 40, 50, 0.08);
+}
+
+.belipsa-showcase-image {
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+
+    overflow: hidden;
+}
+
+.belipsa-showcase-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.6s ease;
+}
+
+.belipsa-showcase:hover .belipsa-showcase-image img {
+    transform: scale(1.03);
+}
+
+.belipsa-showcase-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 60px;
+}
+
+.belipsa-showcase-content h2 {
+    margin-bottom: 20px;
+
+    color: #4b2934;
+
+    font-size: clamp(35px, 4vw, 52px);
+    line-height: 1.05;
+    font-weight: normal;
+}
+
+.belipsa-showcase-content p:last-child {
+    color: #715c62;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .belipsa-showcase {
+        width: 94%;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 70px;
+
+        border-radius: 20px;
+    }
+
+    .belipsa-showcase-image {
+        min-height: 330px;
+        height: 330px;
+    }
+
+    .belipsa-showcase-image img {
+        object-position: center;
+    }
+
+    .belipsa-showcase-content {
+        padding: 40px 25px 45px;
+
+        text-align: center;
+    }
+
+    .belipsa-showcase-content h2 {
+        font-size: 34px;
+    }
+
+    .belipsa-showcase-content p:last-child {
+        font-size: 13px;
+    }
+
 }
