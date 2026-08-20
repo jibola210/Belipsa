@@ -2778,4 +2778,99 @@ a {
         font-size: 13px;
     }
 
+}/* =========================================
+   BELIPSA HERO — MOBILE IMAGE FIX
+========================================= */
+
+@media (max-width: 700px) {
+
+    .hero {
+        width: 94%;
+        height: 520px;
+        min-height: 520px;
+
+        margin: 15px auto 0;
+
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 20px;
+
+        background-image:
+            linear-gradient(
+                rgba(75, 41, 52, 0.18),
+                rgba(75, 41, 52, 0.18)
+            ),
+            url("images/hero.jpg.jpeg");
+
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        padding: 35px 25px 40px;
+
+        background: linear-gradient(
+            transparent,
+            rgba(40, 20, 25, 0.55)
+        );
+
+        color: white;
+    }
+
+    .hero-small {
+        color: #f8dce4;
+    }
+
+    .hero h1 {
+        color: white;
+        font-size: 43px;
+        line-height: 0.98;
+    }
+
+    .hero-text {
+        color: #fff5f7;
+        font-size: 13px;
+        max-width: 320px;
+    }
+
+    .hero-button {
+        background: white;
+        color: #7c3f50;
+    }
+}
+
+
+/* =========================================
+   SMALLER PHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        height: 470px;
+        min-height: 470px;
+
+        background-position: center center;
+    }
+
+    .hero-content {
+        padding: 30px 20px 30px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-text {
+        font-size: 12px;
+    }
 }
