@@ -2873,4 +2873,57 @@ a {
     .hero-text {
         font-size: 12px;
     }
+}@media (max-width: 700px) {
+
+    .hero {
+        width: 94%;
+        height: 500px;
+        min-height: 500px;
+
+        margin: 15px auto 0;
+
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 20px;
+
+        background-image: url("images/hero.jpg.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .hero-content {
+        width: 100%;
+        padding: 30px 22px;
+
+        background: linear-gradient(
+            transparent,
+            rgba(45, 32, 34, 0.7)
+        );
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-text {
+        max-width: 300px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero {
+        height: 460px;
+        min-height: 460px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
 }
